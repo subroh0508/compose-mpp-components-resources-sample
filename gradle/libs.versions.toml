@@ -1,0 +1,49 @@
+[versions]
+agp = "8.2.0"
+kotlin = "1.9.21"
+compose = "1.6.0-dev1350"
+buildconfig = "5.2.0"
+
+androidx-core = "1.12.0"
+androidx-appcompat = "1.6.1"
+androidx-activity = "1.8.2"
+
+kotlin-poet = "1.15.3"
+
+[plugins]
+kotlin-mpp = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+buildconfig = { id = "com.github.gmazzo.buildconfig", version.ref = "buildconfig" }
+
+[libraries]
+android-gradle-build-tools = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+android-gradle-build-tools-builder = { module = "com.android.tools.build:builder", version.ref = "agp" }
+android-gradle-build-tools-builder-model = { module = "com.android.tools.build:builder-model", version.ref = "agp" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlinx-serialization-plugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+compose-gradle-plugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose" }
+
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
+
+kotlin-poet = { module = "com.squareup:kotlinpoet", version.ref = "kotlin-poet" }
+
+[bundles]
+plugins = [
+    "android-gradle-build-tools",
+    "android-gradle-build-tools-builder",
+    "android-gradle-build-tools-builder-model",
+    "kotlin-gradle-plugin",
+    "compose-gradle-plugin",
+]
+
+androidx-activities = [
+    "androidx-core",
+    "androidx-appcompat",
+    "androidx-activity-compose",
+]
+
