@@ -22,5 +22,5 @@ include(
     ":android",
     ":desktop",
     ":features:module1",
-    ":features:module2",
+    // ":features:module2",
 )

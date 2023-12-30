@@ -11,7 +11,7 @@ dependencies {
     implementation(libs.androidx.activity.compose)
 
     implementation(project(":features:module1"))
-    implementation(project(":features:module2"))
+    // implementation(project(":features:module2"))
 }
 
 android { namespace = "app.compose.mpp.sample" }

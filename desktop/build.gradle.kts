@@ -21,7 +21,7 @@ kotlin {
                 implementation(compose.desktop.currentOs)
 
                 implementation(project(":features:module1"))
-                implementation(project(":features:module2"))
+                // implementation(project(":features:module2"))
             }
         }
         named("jvmTest")
